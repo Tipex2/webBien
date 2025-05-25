@@ -1,0 +1,75 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 98 38% 95%; /* #f3fbeb - Light greenish beige */
+    --foreground: 215 41% 20%; /* #243b60 - Dark slate blue */
+    --card: 98 38% 98%; /* Slightly lighter than background for cards */
+    --card-foreground: 215 41% 20%; /* #243b60 */
+    --popover: 98 38% 98%; /* Similar to card */
+    --popover-foreground: 215 41% 20%; /* #243b60 */
+    
+    --primary: 215 41% 26%; /* #243b60 - Dark slate blue */
+    --primary-foreground: 98 38% 95%; /* #f3fbeb - Light greenish beige for contrast on primary */
+    
+    --secondary: 215 30% 88%; /* #d4dde9 - A lighter, softer blue-gray */
+    --secondary-foreground: 215 41% 20%; /* #243b60 */
+    
+    --muted: 215 25% 75%; /* #b0bac9 - Muted blue-gray */
+    --muted-foreground: 215 20% 45%; /* #5c6a82 - Darker muted for text */
+    
+    --accent: 215 40% 60%; /* #6a8bba - A mid-tone blue for accents */
+    --accent-foreground: 98 38% 95%; /* #f3fbeb for text on accent */
+    
+    --destructive: 0 60% 50%; /* A balanced red */
+    --destructive-foreground: 0 0% 100%; /* White */
+    
+    --border: 215 20% 80%; /* #c4cddb - Light blue-gray border */
+    --input: 215 20% 85%; /* #d0d8e3 - Slightly lighter for input backgrounds */
+    --ring: 215 41% 40%; /* #3a5f98 - A brighter blue for focus rings */
+    
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    /* Keeping dark mode distinct, but can be adjusted to match new palette if needed */
+    --background: 220 15% 10%; /* Very Dark Gray-Blue */
+    --foreground: 98 38% 90%; /* Off-white for dark mode text */
+    --card: 220 15% 13%; 
+    --card-foreground: 98 38% 90%;
+    --popover: 220 15% 13%;
+    --popover-foreground: 98 38% 90%;
+    
+    --primary: 215 50% 55%; /* A brighter version of #243b60 for dark mode */
+    --primary-foreground: 220 15% 5%; /* Almost black for contrast */
+    
+    --secondary: 220 15% 20%; 
+    --secondary-foreground: 98 38% 85%;
+    
+    --muted: 220 15% 30%;
+    --muted-foreground: 220 10% 60%;
+    
+    --accent: 215 50% 45%; /* Darker accent for dark mode */
+    --accent-foreground: 98 38% 90%;
+    
+    --destructive: 0 50% 40%;
+    --destructive-foreground: 0 0% 100%;
+    
+    --border: 220 15% 25%;
+    --input: 220 15% 25%;
+    --ring: 215 50% 65%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
